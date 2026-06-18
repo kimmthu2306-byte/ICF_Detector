@@ -1,0 +1,20 @@
+# Secrets
+.env
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Models (large files)
+models/*.pkl
+
+# Data (raw có thể sensitive)
+data/collected/
+data/processed/
