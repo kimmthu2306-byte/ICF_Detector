@@ -18,6 +18,21 @@ The pipeline combines:
 - `notebooks/` — exploratory analysis and evaluation notebooks
 - `models/` — trained model artifacts (ignored by Git unless you explicitly want to track them)
 
+## Dataset files
+
+The correct seed dataset files are:
+
+- `data/raw/AI slop.txt` — 144 channels (seed slop)
+- `data/raw/non AI.txt` — 63 channels (seed genuine)
+
+There are also expanded files available for additional crawling/expansion:
+
+- `data/raw/AI slop expand.txt` — 169 channels
+- `data/raw/non AI expand.txt` — 151 channels
+- `data/raw/non AI expand 2.txt` — 102 channels
+
+> Note: the genuine seed file is `non AI.txt` (not `non AU.txt`).
+
 ## Setup
 
 1. Create and activate a virtual environment
