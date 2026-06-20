@@ -2,11 +2,11 @@
 
 ICF Detector là dự án Học máy nhằm phát hiện các kênh YouTube **AI Slop** – những kênh sử dụng nội dung tự động, clickbait, hoặc kém chất lượng – dựa trên metadata và đặc trưng văn bản.
 
-## 🎯 Mục tiêu
+## Mục tiêu
 
 Xây dựng pipeline hoàn chỉnh từ thu thập dữ liệu, trích xuất đặc trưng, huấn luyện mô hình, đến dự đoán. Hiện tại mô hình Random Forest đạt **F1 ≈ 0.89** trên tập test.
 
-## 📊 Dữ liệu
+## Dữ liệu
 
 - **File đặc trưng chính**: `features_final.csv` (chia sẻ qua Google Drive, luôn cập nhật phiên bản mới nhất).  
 - **Số lượng**: 712 kênh (335 AI Slop, 377 Genuine).  
@@ -21,7 +21,9 @@ Xây dựng pipeline hoàn chỉnh từ thu thập dữ liệu, trích xuất đ
 🔗 **Link dữ liệu (Google Drive – tự động cập nhật)**:  
 `https://drive.google.com/uc?id=<YOUR_FILE_ID>` (ID được cung cấp riêng) 
 
-## 📁 Cấu trúc repository
+## Cấu trúc repository
+
+```text
 ICF_Detector/
 ├── main.py # Entry point (nếu có)
 ├── requirements.txt
@@ -45,21 +47,31 @@ ICF_Detector/
 └── notebooks/ # Notebook EDA và trực quan hóa
 
 
-## 🚀 Bắt đầu nhanh
+## Bắt đầu nhanh
 
 1. **Clone repo**:
    ```bash
    git clone https://github.com/tinthu02/ICF_Detector.git
    cd ICF_Detector
+   ```
+
 2. **Tạo virtual environment & cài đặt**:
-  ```bash
-  python -m venv .venv
-  source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-3. **Chuẩn bị dữ liệu: Tải features_final.csv từ link Drive trên, đặt vào data/processed/**
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # Windows: .venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+
+3. **Chuẩn bị dữ liệu**:
+   * Tải file `features_final.csv` từ link Drive trên.
+   * Đặt file vừa tải vào thư mục `data/processed/`.
+
 4. **Huấn luyện mô hình**:
-  ```bash
-  python src/train.py
+   ```bash
+   python src/train.py
+   ```
+
 5. **Dự đoán kênh mới**:
-  ```bash
-  python src/predict.py "https://www.youtube.com/@ExampleChannel"
+   ```bash
+   python src/predict.py "https://www.youtube.com/@ExampleChannel"
+   ```
